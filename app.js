@@ -50,7 +50,7 @@ app.use(mongoSanitize({
 }))
 const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
 
-const store = new MongoDBStore({
+const store = new MongoStore({
     url: dbUrl,
     secret,
     touchAfter: 24 * 60 * 60
